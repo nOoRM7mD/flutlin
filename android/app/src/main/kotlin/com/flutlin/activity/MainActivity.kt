@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log.d
 import com.flutlin.apiConfig.WebApiClient
 import com.flutlin.R
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     flutterView!!.runFromBundle(runArguments)
 
     // establishing message channel which can be used for the data passing from one platform to another.
-    messageChannel = BasicMessageChannel(flutterView, CHANNEL, StringCodec.INSTANCE)
+    messageChannel = BasicMessageChannel(flutterView!!, CHANNEL, StringCodec.INSTANCE)
 
     sendAndroidIncrement("")
 
